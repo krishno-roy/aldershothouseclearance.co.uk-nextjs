@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import FAQ from "../FAQ/page";
 
 const Home = () => {
   return (
@@ -82,6 +83,7 @@ const Home = () => {
           </p>
         </div>
       </div>
+      <FAQ/>
     </div>
   );
 };

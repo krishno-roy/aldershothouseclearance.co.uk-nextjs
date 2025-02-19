@@ -1,3 +1,5 @@
+"use client"; // Add this directive at the top of the file
+
 import React, { useState } from "react";
 import { FaPlus } from "react-icons/fa";
 import { FaMinus } from "react-icons/fa6";
