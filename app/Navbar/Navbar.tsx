@@ -9,6 +9,7 @@ import Image from "next/image";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname(); // Get the current route path
+  const phoneNumber = "01738612417"; // Define the phone number here
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -68,9 +69,15 @@ const Navbar = () => {
         </div>
 
         {/* Phone Icon */}
-        <div className="bg-[#A4DC54]  p-2 rounded">
-          <FaPhoneSquareAlt className="text-xl text-white rounded" />
-        </div>
+        <a
+          href={`tel:${phoneNumber}`}
+          target="_blank" // Opens the link in a new tab
+          rel="noopener noreferrer" // Recommended for security when using target="_blank"
+        >
+          <div className="bg-[#A4DC54] p-2 rounded cursor-pointer">
+            <FaPhoneSquareAlt className="text-xl text-white rounded" />
+          </div>
+        </a>
 
         {/* Hamburger Menu Icon (Mobile) */}
         <div className="md:hidden">
@@ -139,8 +146,12 @@ const Navbar = () => {
             <FaPhoneAlt className="text-white" />
           </div>
           <span>
-            <a href="tel:07969868115" target="_blank" rel="noopener noreferrer">
-              07969868115
+            <a
+              href={`tel:${phoneNumber}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {phoneNumber}
             </a>
           </span>
         </div>
